@@ -12,7 +12,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.oopsmails.springboot.dev.repo</groupId>
+    <groupId>com.oopsmails.dev.repo.backend</groupId>
     <artifactId>spring-boot-java-main</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>spring-boot-java-main</name>
