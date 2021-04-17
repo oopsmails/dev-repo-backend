@@ -18,61 +18,26 @@
 
 package com.oopsmails.mavenplugins.zipfile;
 
-import org.apache.maven.plugin.AbstractMojo;
-import org.apache.maven.plugin.MojoExecutionException;
-import org.apache.maven.plugins.annotations.LifecyclePhase;
-import org.apache.maven.plugins.annotations.Mojo;
-import org.apache.maven.plugins.annotations.Parameter;
-import org.apache.maven.project.MavenProject;
-
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
-/**
- * Main class for creating file zip.
- */
-@Mojo(name = "zip", defaultPhase = LifecyclePhase.GENERATE_RESOURCES)
-public class FileZipMojo extends AbstractMojo {
+public class FileZipMojoTest {
+    public static String WORKING_PATH = "/home/albert/Documents/github/dev-repo-backend/maven-plugins-dev-repo/maven-plugin-zipfile";
+    public static String INPUT_FILE = WORKING_PATH + "/src/main/resources";
+    public static String OUTPUT_FILE = WORKING_PATH + "/dirCompressed.zip";
 
-    @Parameter(required = true)
-    private File input;
+    public static void main(String[] args) throws IOException {
+        FileOutputStream fos = new FileOutputStream(OUTPUT_FILE);
+        ZipOutputStream zipOut = new ZipOutputStream(fos);
+        File fileToZip = new File(INPUT_FILE);
 
-    @Parameter
-    private File zipName;
-
-    /**
-     * @parameter default-value="${project}"
-     * @required
-     * @readonly
-     */
-    @Parameter(defaultValue = "${project}", required = true, readonly = true)
-    MavenProject project;
-
-    private static final String FILE_EXTENSION = ".zip";
-
-    public void execute() throws MojoExecutionException {
-        getLog().info("Zipping files in \"" + input.getPath() + "\".");
-
-        final String outputFileName = zipName != null ? zipName + FILE_EXTENSION : project.getName() + "-" + project.getVersion() + FILE_EXTENSION;
-
-        try {
-
-            FileOutputStream fos = new FileOutputStream(outputFileName);
-            ZipOutputStream zipOut = new ZipOutputStream(fos);
-
-            zipFile(input, input.getName(), zipOut);
-            zipOut.close();
-            fos.close();
-        } catch (final FileNotFoundException e) {
-            throw new MojoExecutionException("No file found", e);
-        } catch (final IOException e) {
-            throw new MojoExecutionException("Exception reading files", e);
-        }
+        zipFile(fileToZip, fileToZip.getName(), zipOut);
+        zipOut.close();
+        fos.close();
     }
 
     private static void zipFile(File fileToZip, String fileName, ZipOutputStream zipOut) throws IOException {
