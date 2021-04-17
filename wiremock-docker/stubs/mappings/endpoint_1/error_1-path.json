@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/error404"
+  },
+  "response": {
+    "status": 404,
+    "bodyFileName": "error_1.json",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

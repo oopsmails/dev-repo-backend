@@ -1,0 +1,12 @@
+# To Be Revised ...
+version: '3.1'
+
+services:
+  wiremock:
+    image: rodolpheche/wiremock
+    ports:
+      - "xxxx:xxxxx"
+    command: --extensions com.opentable.extension.BodyTransformer
+    volumes:
+      - ./src/wiremock:/home/wiremock
+      - ./extension_dir:/var/wiremock/extensions

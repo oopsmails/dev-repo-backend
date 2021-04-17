@@ -1,11 +1,12 @@
-# To Be Revised ...
 version: '3.1'
 
-wiremock:
-  image: rodolpheche/wiremock
-  ports:
-    - "xxxx:xxxxx"
-  command: --extensions com.opentable.extension.BodyTransformer
-  volumes:
-    - ./src/wiremock:/home/wiremock
-    - ./extension_dir:/var/wiremock/extensions
+services:
+  wiremock:
+    image: rodolpheche/wiremock
+    ports:
+      - "7070:7070"
+    command: --port 7070
+      - -verbose
+      - -global-response-templating
+    volumes:
+      - ./stubs:/home/wiremock
