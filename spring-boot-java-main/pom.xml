@@ -115,7 +115,6 @@
             <plugin>
                 <groupId>org.jsonschema2pojo</groupId>
                 <artifactId>jsonschema2pojo-maven-plugin</artifactId>
-                <!--                <version>0.4.23</version>-->
                 <version>1.1.0</version>
                 <executions>
                     <execution>
@@ -164,6 +163,7 @@
                                 </sourcePath>
                             </sourcePaths>
                             <targetPackage>com.oopsmails.springboot.javamain.jsd.gen03</targetPackage>
+                            <customRuleFactory>com.oopsmails.mavenplugins.jsd2pojoext.JsonSchemaRuleFactory</customRuleFactory>
                         </configuration>
                         <goals>
                             <goal>generate</goal>
@@ -194,9 +194,14 @@
                             <goal>generate</goal>
                         </goals>
                     </execution>
-
-
                 </executions>
+                <dependencies>
+                    <dependency>
+                        <groupId>com.oopsmails.mavenplugins.dev.repo</groupId>
+                        <artifactId>maven-plugin-jsonschema2pojo-ext</artifactId>
+                        <version>1.0.0-SNAPSHOT</version>
+                    </dependency>
+                </dependencies>
             </plugin>
         </plugins>
     </build>
