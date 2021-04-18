@@ -27,3 +27,8 @@ https://dzone.com/articles/beginners-guide-to-creating-a-maven-plugin
 </plugin>
 ```
 
+## Testing
+
+- maven-plugins-dev-repo/maven-plugin-zipfile/pom.xml, run install
+- maven-plugins-dev-repo/spring-boot-java-main/pom.xml, run package
+

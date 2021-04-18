@@ -170,6 +170,21 @@
                         </goals>
                     </execution>
 
+                    <execution>
+                        <id>jsonSchema04</id>
+                        <configuration>
+                            <annotationStyle>jackson2</annotationStyle>
+                            <sourcePaths>
+                                <sourcePath>${project.basedir}/src/main/resources/jsd/jsonSchema04-person-lombok.json</sourcePath>
+                            </sourcePaths>
+                            <targetPackage>com.oopsmails.springboot.javamain.jsd.gen04</targetPackage>
+                            <customAnnotator>com.oopsmails.mavenplugins.jsd2pojoext.LombokAnnotator</customAnnotator>
+                        </configuration>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                    </execution>
+
                     <!-- from json object not working ???!!!-->
                     <execution>
                         <id>jsonObject01</id>

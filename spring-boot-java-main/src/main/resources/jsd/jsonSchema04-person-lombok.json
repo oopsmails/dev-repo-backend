@@ -1,0 +1,19 @@
+{
+  "title": "Person",
+  "type": "object",
+  "additionalProperties": {
+    "lombok-builder": true,
+    "lombok-data": true,
+    "lombok-getter": true,
+    "lombok-setter": true,
+    "lombok-equals-and-hash-code": true,
+    "lombok-no-args-constructor": true,
+    "lombok-all-args-constructor": true,
+    "lombok-to-string": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    }
+  }
+}
