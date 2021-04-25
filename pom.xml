@@ -14,5 +14,6 @@
         <module>spring-boot-java-main</module>
         <module>codegen-openapi</module>
         <module>codegen-swagger-v3</module>
+        <module>dockerize-angular-springboot-mysql</module>
     </modules>
 </project>
