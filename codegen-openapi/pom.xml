@@ -13,6 +13,7 @@
     <modules>
         <module>codegen-openapi-test</module>
         <module>codegen-openapi-maven-tutorialapi</module>
+        <module>codegen-openapi-maven-bookshopapi</module>
     </modules>
 
     <properties>

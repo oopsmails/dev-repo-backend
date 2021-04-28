@@ -22,4 +22,6 @@ java -jar openapi-generator-cli-4.3.1.jar generate -g spring -i openapi.yaml -c 
 Info! Without setting interfaceOnly = true the generator was trying to generate a OpenAPIDocumentationConfig class.
 We are not sure if this way the best one to solve this "challenge", but it worked for us. If you have a better solution, please let us know.
 
+## codegen-openapi-maven-bookshopapi
+
 
