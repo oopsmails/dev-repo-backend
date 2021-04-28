@@ -1,0 +1,100 @@
+openapi: 3.0.3
+info:
+  title: tutorial.com API
+  version: 1.0.0
+tags:
+  - name: tutorial interface
+    description: Tutorial API
+paths:
+  '/tutorials':
+    get:
+      tags:
+        - tutorial interface
+      responses:
+        '200':
+          description: Returns tutorials
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/tutorials'
+    post:
+      tags:
+        - tutorial interface
+      requestBody:
+        $ref: '#/components/requestBodies/tutorialBody'
+      responses:
+        "200":
+          description: "Ok, tutorial successfuly saved"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/tutorial'
+        "400":
+          description: "something went wrong"
+        default:
+          description: "Unexpected error"
+  '/tutorials/{id}':
+    get:
+      tags:
+        - tutorial interface
+      parameters:
+        - in: path
+          name: id
+          required: true
+          description: id of tutorial
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "200":
+          description: "return tutorial with the specified id"
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/tutorial'
+        "404":
+          description: "tutorial not found"
+        default:
+          description: "Unexpected error"
+    delete:
+      tags:
+        - tutorial interface
+      parameters:
+        - in: path
+          name: id
+          required: true
+          description: id of tutorial
+          schema:
+            type: integer
+            format: int64
+      responses:
+        "204":
+          description: "tutorial was deleted successfully"
+        "404":
+          description: "tutorial not found"
+        default:
+          description: "Unexpected error"
+
+components:
+  schemas:
+    tutorial:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: in64
+        name:
+          type: string
+        author:
+          type: string
+    tutorials:
+      type: array
+      items:
+        $ref: '#/components/schemas/tutorial'
+
+  requestBodies:
+    tutorialBody:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/tutorial'

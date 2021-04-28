@@ -1,0 +1,8 @@
+{
+  "basePackage": "com.oopsmails.openapi.codegen",
+  "configPackage": "com.oopsmails.openapi.codegen.config",
+  "apiPackage": "com.oopsmails.openapi.codegen.controllers",
+  "modelPackage": "com.oopsmails.openapi.codegen.model",
+  "groupId": "com.oopsmails.dev.repo.backend",
+  "artifactId": "codegen-openapi-test"
+}
