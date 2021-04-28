@@ -12,6 +12,7 @@
 
     <modules>
         <module>codegen-openapi-test</module>
+        <module>codegen-openapi-maven-tutorialapi</module>
     </modules>
 
     <properties>
