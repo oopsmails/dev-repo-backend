@@ -24,4 +24,7 @@ We are not sure if this way the best one to solve this "challenge", but it worke
 
 ## codegen-openapi-maven-bookshopapi
 
+https://medium.com/swlh/openapi-swagger-ui-codegen-with-spring-boot-1afb1c0a570e
+
+https://github.com/tejozarkar/SwaggerSpringDemo
 
