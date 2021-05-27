@@ -1,0 +1,47 @@
+{
+  "type": "object",
+  "id": "urn:jsonschema:com:oopsmails:json:classtoschema:model:Employee",
+  "properties": {
+    "id": {
+      "type": "integer"
+    },
+    "organizationId": {
+      "type": "integer"
+    },
+    "departmentId": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string"
+    },
+    "age": {
+      "type": "integer"
+    },
+    "position": {
+      "type": "string"
+    },
+    "addresses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "id": "urn:jsonschema:com:oopsmails:json:classtoschema:model:Address",
+        "properties": {
+          "street": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "department": {
+      "type": "string",
+      "enum": [
+        "DEVELOPMENT",
+        "BUSINESS",
+        "SALES"
+      ]
+    }
+  }
+}
