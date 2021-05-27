@@ -56,8 +56,8 @@ public class EasyRandomMain {
                     .objectPoolSize(100)
                     .randomizationDepth(3)
                     .charset(forName("UTF-8"))
-                    .stringLengthRange(5, 50)
-                    .collectionSizeRange(1, 10)
+                    .stringLengthRange(5, 6)
+                    .collectionSizeRange(1, 1)
                     .scanClasspathForConcreteTypes(true)
                     .overrideDefaultInitialization(false)
                     .ignoreRandomizationErrors(true);

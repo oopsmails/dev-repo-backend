@@ -13,6 +13,7 @@
     <modules>
         <module>java-class-to-schema</module>
         <module>json-schema-to-object</module>
+        <module>java-class-to-object</module>
     </modules>
 
     <artifactId>json-schema-object-class</artifactId>
