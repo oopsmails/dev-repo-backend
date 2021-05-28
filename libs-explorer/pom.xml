@@ -2,22 +2,24 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>dev-repo-backend</artifactId>
+        <groupId>com.oopsmails.dev.repo.backend</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
-
-    <groupId>com.oopsmails.dev.repo.backend</groupId>
-    <artifactId>dev-repo-backend</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-
     <modules>
-        <module>maven-plugins-dev-repo</module>
-        <module>spring-boot-java-main</module>
-        <module>codegen-openapi</module>
-        <module>codegen-swagger-v3</module>
-        <module>dockerize-angular-springboot-mysql</module>
-        <module>json-schema-object-class</module>
-        <module>libs-explorer</module>
+        <module>apache-avro</module>
         <module>apache-avro-schema-builder</module>
         <module>apache-avro-class-generator</module>
     </modules>
+
+    <artifactId>libs-explorer</artifactId>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
 </project>
