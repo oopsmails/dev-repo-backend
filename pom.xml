@@ -17,7 +17,5 @@
         <module>dockerize-angular-springboot-mysql</module>
         <module>json-schema-object-class</module>
         <module>libs-explorer</module>
-        <module>apache-avro-schema-builder</module>
-        <module>apache-avro-class-generator</module>
     </modules>
 </project>
