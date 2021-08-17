@@ -17,5 +17,6 @@
         <module>dockerize-angular-springboot-mysql</module>
         <module>json-schema-object-class</module>
         <module>libs-explorer</module>
+        <module>wiremock</module>
     </modules>
 </project>
