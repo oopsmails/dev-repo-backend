@@ -7,6 +7,11 @@
     <groupId>com.oopsmails.dev.repo.backend</groupId>
     <artifactId>dev-repo-backend</artifactId>
     <version>1.0.0-SNAPSHOT</version>
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
     <packaging>pom</packaging>
 
     <modules>
@@ -17,5 +22,6 @@
         <module>dockerize-angular-springboot-mysql</module>
         <module>json-schema-object-class</module>
         <module>libs-explorer</module>
+        <module>wiremock</module>
     </modules>
 </project>

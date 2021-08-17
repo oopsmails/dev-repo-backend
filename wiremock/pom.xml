@@ -8,12 +8,12 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>wiremock</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>apache-avro</module>
-        <module>apache-avro-schema-builder</module>
-        <module>apache-avro-class-generator</module>
+        <module>wiremock-standalone-server</module>
+        <module>wiremock-junit</module>
     </modules>
 
-    <artifactId>libs-explorer</artifactId>
 </project>
