@@ -16,5 +16,6 @@
         <module>codegen-swagger-v3</module>
         <module>dockerize-angular-springboot-mysql</module>
         <module>json-schema-object-class</module>
+        <module>libs-explorer</module>
     </modules>
 </project>
