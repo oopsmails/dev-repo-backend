@@ -51,3 +51,9 @@ components:
         author:
           type: string
           example: Brandon Sanderson
+        publishDate:
+          type: date
+          example: 2021-03-01
+        updateDate:
+          type: date
+          example: 2021-03-02 15:16:00

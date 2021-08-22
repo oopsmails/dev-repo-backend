@@ -12,8 +12,8 @@
     <artifactId>apache-avro-class-generator</artifactId>
 
     <properties>
-        <maven.compiler.source>15</maven.compiler.source>
-        <maven.compiler.target>15</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
         <avro.version>1.10.1</avro.version>
         <slf4j.version>1.7.26</slf4j.version>
     </properties>
