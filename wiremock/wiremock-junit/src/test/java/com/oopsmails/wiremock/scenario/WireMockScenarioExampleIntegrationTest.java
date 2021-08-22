@@ -9,6 +9,7 @@ import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 
@@ -19,6 +20,7 @@ import java.io.InputStreamReader;
 import static com.github.tomakehurst.wiremock.client.WireMock.*;
 import static org.junit.Assert.assertEquals;
 
+@Ignore("This is for integration test, need server up")
 public class WireMockScenarioExampleIntegrationTest {
     private static final String THIRD_STATE = "third";
     private static final String SECOND_STATE = "second";
