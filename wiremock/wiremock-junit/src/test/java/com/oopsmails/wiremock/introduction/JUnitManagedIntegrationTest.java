@@ -7,6 +7,7 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
+import org.junit.Ignore;
 import org.junit.Rule;
 import org.junit.Test;
 
@@ -19,6 +20,7 @@ import java.util.Scanner;
 import static com.github.tomakehurst.wiremock.client.WireMock.*;
 import static org.junit.Assert.assertEquals;
 
+@Ignore ("This is for integration test, need server up")
 public class JUnitManagedIntegrationTest {
     private static final String BAELDUNG_WIREMOCK_PATH = "/baeldung/wiremock";
     private static final String APPLICATION_JSON = "application/json";
