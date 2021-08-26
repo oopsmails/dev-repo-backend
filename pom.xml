@@ -23,5 +23,6 @@
         <module>json-schema-object-class</module>
         <module>libs-explorer</module>
         <module>wiremock</module>
+        <module>java-microbenchmark-harness</module>
     </modules>
 </project>
