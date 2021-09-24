@@ -51,6 +51,9 @@ components:
         author:
           type: string
           example: Brandon Sanderson
+        catagory_desc:
+          type: string
+          example: science
         publishDate:
           type: date
           example: 2021-03-01
